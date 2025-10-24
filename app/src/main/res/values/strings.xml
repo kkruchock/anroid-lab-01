@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidLab01</string>
+    <string name="button_to_main">to main screen</string>
+    <string name="button_to_second">to screen 2</string>
+    <string name="button_to_third">to screen 3</string>
+    <string name="default_second_screen_text">screen 2</string>
+    <string name="default_third_screen_text">screen 3</string>
 </resources>
