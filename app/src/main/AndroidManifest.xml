@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLab01">
         <activity
-            android:name=".ThirdActivity"
+            android:name=".homework_1.ThirdActivity"
             android:exported="false" />
         <activity
-            android:name=".SecondActivity"
+            android:name=".homework_1.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".homework_1.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.AndroidLab01">

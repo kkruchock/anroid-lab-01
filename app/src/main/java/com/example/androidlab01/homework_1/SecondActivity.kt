@@ -1,4 +1,4 @@
-package com.example.androidlab01
+package com.example.androidlab01.homework_1
 
 import android.content.Context
 import android.os.Bundle
@@ -18,24 +18,27 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.androidlab01.R
 
-class ThirdActivity : ComponentActivity() {
+class SecondActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
-            val textFromMain = intent.getStringExtra("textFromMain") ?: stringResource(R.string.default_third_screen_text)
+            val DEFAULT_TEXT = stringResource(R.string.default_second_screen_text)
+            val isTextFromMainExist = intent.getStringExtra("textFromMain") != null
+            val secondScreenText = intent.getStringExtra("textFromMain") ?: DEFAULT_TEXT
             val context = LocalContext.current
 
-            ThirdScreen(textFromMain, context)
+            SecondScreen(secondScreenText, context, isTextFromMainExist)
         }
     }
 }
 
 @Composable
-fun ThirdScreen(
-    textFromMain: String,
-    context: Context
+fun SecondScreen(
+    secondScreenText: String,
+    context: Context,
+    isTextfromMainExist: Boolean
 ) {
     Column (
         modifier = Modifier.fillMaxHeight(0.8f).fillMaxWidth(),
@@ -43,15 +46,28 @@ fun ThirdScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Text(
-            text = textFromMain,
+            text = secondScreenText,
             fontSize = 25.sp,
             modifier = Modifier.padding(16.dp)
         )
         Button(onClick = {
             navigateToMainActivity(context)
-        }) {
-            Text(text = stringResource(R.string.button_to_main),
-                fontSize = 25.sp)
+        },
+            modifier = Modifier.padding(16.dp)
+        ) {
+            Text(text = stringResource(R.string.button_to_main), fontSize = 25.sp)
+        }
+        Button(
+            onClick = {
+                navigateToOthersActivity(
+                    context,
+                    ThirdActivity::class.java,
+                    if (isTextfromMainExist) secondScreenText else ""
+                )
+            },
+            modifier = Modifier.padding(16.dp)
+        ) {
+            Text(text = stringResource(R.string.button_to_third), fontSize = 25.sp)
         }
     }
 }
