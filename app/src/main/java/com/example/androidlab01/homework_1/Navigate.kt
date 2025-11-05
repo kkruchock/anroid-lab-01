@@ -1,4 +1,4 @@
-package com.example.androidlab01
+package com.example.androidlab01.homework_1
 
 import android.content.Context
 import android.content.Intent

@@ -5,4 +5,18 @@
     <string name="button_to_third">to screen 3</string>
     <string name="default_second_screen_text">screen 2</string>
     <string name="default_third_screen_text">screen 3</string>
+    <string name="label_email">email</string>
+    <string name="label_password">password</string>
+    <string name="label_title">title</string>
+    <string name="label_content">content</string>
+    <string name="sign_in_button">sign in</string>
+    <string name="show_button">show</string>
+    <string name="hide_button">hide</string>
+    <string name="error_email_empty">email cannot be empty</string>
+    <string name="error_email_invalid">invalid email format</string>
+    <string name="error_password_empty">password cannot be empty</string>
+    <string name="error_password_too_short">password must contain at least 8 characters</string>
+    <string name="error_title_empty">title cannot be empty</string>
+    <string name="add_note_button">add note</string>
+    <string name="save_note_button">save note</string>
 </resources>

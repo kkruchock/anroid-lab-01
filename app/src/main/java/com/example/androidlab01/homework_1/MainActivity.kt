@@ -1,4 +1,4 @@
-package com.example.androidlab01
+package com.example.androidlab01.homework_1
 
 import android.content.Context
 import android.os.Bundle
@@ -24,6 +24,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.androidlab01.R
 
 
 class MainActivity : ComponentActivity() {
