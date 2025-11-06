@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLab01">
         <activity
-            android:name=".homework_2.present.activity.MainActivity"
+            android:name=".homework_3.present.activity.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.AndroidLab01">
@@ -22,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name="com.example.androidlab01.homework_3.domain.utils.ReplyReceiver" />
 <!--        <activity-->
 <!--            android:name=".homework_1.ThirdActivity"-->
 <!--            android:exported="false" />-->
