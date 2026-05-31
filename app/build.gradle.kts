@@ -56,6 +56,7 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
+    implementation(libs.androidx.constraintlayout)
     ksp(libs.room.compiler)
     implementation(libs.bcrypt)
     implementation(libs.lifecycle.viewmodel.compose)
